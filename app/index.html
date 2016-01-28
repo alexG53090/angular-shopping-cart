@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="shoppingCart">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <!-- scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular-route.js"></script>
+    <script src="/app.js"></script>
+    <script src="/controllers/mainController.js"></script>
+    <script src="/controllers/shoppingcartController.js"></script>
+    <script src="/directives/mainDirective.js"></script>
+    <script src="/factories/factories.js"></script>
+    <script src="/services/cart.js"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body ng-controller="mainController">
+    <h1 class="brand"> Welcome to MEAN tea</h1>
+    <nav class="navigation">
+      <div class="nav-component">
+        <a href="/#/">Home</a>
+      </div>
+      <div class="nav-component">
+        <a href="/#/about">About</a>
+      </div>
+      <div class="nav-component">
+        <a href="/#/contact">Contact</a>
+      </div>
+    </nav>
+    <div ng-view></div>
+  </body>
+</html>
