@@ -1,0 +1,54 @@
+<main class="main-container">
+  <div class="search-bar">
+    <div class="search-component">
+      <p>Search by category</p>
+      <select ng-model="category">
+        <option value="dark">dark</option>
+        <option value="cold">cold</option>
+        <option value="awesome">awesome</option>
+        <option value="dry">dry</option>
+        <option value="hot">hot</option>
+        <option value="awesome">awesome</option>
+        <option value="summer">summer</option>
+        <option value="lucid">lucid</option>
+        <option value="warm">warm</option>
+        <option value="winter">winter</option>
+        <option value="spring">spring</option>
+      </select>
+    </div>
+    <div class="search-component">
+      <p>Search by name</p>
+      <input type="text" placeholder="name" ng-model="search" />
+    </div>
+    <div class="search-component">
+      <button class="checkout-btn"><a href="/#/checkout">Checkout | bag: {{bag.items}}</a></button>
+    </div>
+  </div>
+  <ul ng-repeat="tea in data | filter:search | filter:category">
+    <li class="tea-item">
+      <div class="image-container">
+        <img ng-src="{{tea.imageUrl}}" />
+      </div>
+      <div class="tea-info-container">
+        <h1>{{tea.name}}</h1><br />
+        <h2>{{tea.price}}</h2><br />
+        <h3>{{tea.caffeineScale}}</h3><br />
+        <h4>{{tea.ingredients}}</h4><br />
+        <h5>{{tea.rating}}</h5><br />
+        <h6>{{tea.inStock}}<h6><br />
+        <ul ng-repeat"category in tea.category">
+          <li>{{tea.categories}}</li>
+        </ul>
+      </div>
+      <div class="update-tea">
+        <h2 class="quantity-label">Quantity:</h2>
+        <select ng-model="quantity" class="select-quantity">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+        <button class="add-to-bag-btn" ng-click="addToCart(tea, quantity)">Add to Bag</button>
+      </div>
+    </li>
+  </ul>
+</main>
