@@ -21,23 +21,27 @@
       <input type="text" placeholder="name" ng-model="search" />
     </div>
     <div class="search-component">
+      <p>Search by price</p>
+      <input type="text" placeholder="price" ng-model="price" />
+    </div>
+    <div class="search-component">
       <button class="checkout-btn"><a href="/#/checkout">Checkout | bag: {{bag.items}}</a></button>
     </div>
   </div>
-  <ul ng-repeat="tea in data | filter:search | filter:category">
+  <ul ng-repeat="tea in data | filter:search | filter:category | filter:price">
     <li class="tea-item">
       <div class="image-container">
         <img ng-src="{{tea.imageUrl}}" />
       </div>
       <div class="tea-info-container">
         <h1>{{tea.name}}</h1><br />
-        <h2>{{tea.price}}</h2><br />
+        <h2>{{tea.price | currency}}</h2><br />
         <h3>{{tea.caffeineScale}}</h3><br />
-        <h4>{{tea.ingredients}}</h4><br />
-        <h5>{{tea.rating}}</h5><br />
-        <h6>{{tea.inStock}}<h6><br />
-        <ul ng-repeat"category in tea.category">
-          <li>{{tea.categories}}</li>
+        <p>{{tea.ingredients}}</p><br />
+        <p>{{tea.rating}}</p><br />
+        <p>{{tea.inStock}}<p><br />
+        <ul style="display:inline-block;padding-right:10px;" ng-repeat="category in tea.categories">
+          <li>{{category}}</li>
         </ul>
       </div>
       <div class="update-tea">

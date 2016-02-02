@@ -1,6 +1,8 @@
 angular.module('shoppingCart')
 .service('cartService', function(){
+
   var cart = [];
+
   return {
     cart: cart,
     addToCart: function(tea, quantity){
@@ -17,6 +19,12 @@ angular.module('shoppingCart')
     },
     getAll: function(cart){
       console.log(cart)
+    },
+    getTotal: function(cart){
+      cart.forEach(function(previousValue, currentValue, currentIndex, array){
+        console.log(currentValue)
+      })
     }
+
   };
 })

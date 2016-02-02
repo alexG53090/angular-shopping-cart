@@ -20,6 +20,11 @@ footer, header, hgroup, menu, nav, section {
 body {
   line-height: 1;
   font-family: "verdana";
+	background-color: white;
+}
+input {
+	font-size: 1em;
+	height:50px;
 }
 ol, ul { list-style: none;}
 blockquote, q {quotes: none;}
@@ -44,23 +49,23 @@ h6 {font-size: .5em;}
 /* NAVIGATION STYLES */
 
 .navigation {
-  width: 96%;
+  width: 80%;
   display: flex;
   flex-direction: row;
   margin: auto;
   padding: auto;
   height: 100px;
-  justify-content: center;
   background-color: white;
+	text-align: left;
 }
 
 .nav-component {
-  width: 20%;
+	margin-right: 10px;
   display: flex;
   flex-direction: row;
-  margin: auto;
-  padding: auto;
-  justify-content: center;
+	justify-content: center;
+	margin-top: 50px;
+	padding: auto;
 }
 
 .brand {
@@ -69,7 +74,11 @@ h6 {font-size: .5em;}
   font-size: 3em;
   color: tomato;
   font-weight: 600;
-  text-align: center;
+  text-align: left;
+	width:80%;
+	margin:auto;
+	padding: auto;
+	margin-top: 50px;
 }
 
 /* end template styling */
@@ -78,19 +87,17 @@ h6 {font-size: .5em;}
 .main-container {
   height: 100%;
   width: 100%;
-  background-color: #e1e1e1;
+  background-color: white;
 }
-
 .tea-item {
   background-color: white;
   width: 96%;
   display: flex;
   flex-direction: row;
   margin: auto;
-  padding: auto;
+  padding: 30px;
   justify-content: center;
 }
-
 .image-container {
   display: flex;
   flex-direction:row;
@@ -102,18 +109,15 @@ h6 {font-size: .5em;}
   width: 45%;
   justify-content: center;
 }
-
 .update-tea {
   display: flex;
   flex-direction:row;
   width: 25%;
   justify-content: center;
 }
-
 .quantity-label {
   margin: 6%;
 }
-
 .select-quantity {
   margin: 6%;
   font-size: 2em;
@@ -122,23 +126,19 @@ h6 {font-size: .5em;}
 /* SEARCH BAR STYLES */
 
 .search-bar {
-  width: 96%;
+  width: 80%;
   display: flex;
   flex-direction: row;
-  margin: auto;
-  padding: auto;
+	margin: auto;
+	padding: auto;
   height: 100px;
-  justify-content: center;
+  justify-content: left;
   background-color: white;
 }
-
 .search-component {
-  width: 20%;
   display: flex;
   flex-direction: row;
-  margin: auto;
-  padding: auto;
-  justify-content: center;
+	width:25%;
 }
 
 /* BUTTON STYLES */
@@ -150,7 +150,6 @@ h6 {font-size: .5em;}
   width: 100%;
   border-radius: 20px;
 }
-
 .add-to-bag-btn {
   height: 50px;
   border: none;
@@ -158,4 +157,14 @@ h6 {font-size: .5em;}
   border-radius: 20px;
   margin:2%;
   width: 100px;
+}
+
+/* checkout page */
+.quantity-of-product {
+	display: flex;
+	flex-direction: row;
+}
+.total-cost-of-product {
+	display: flex;
+	flex-direction: row;
 }

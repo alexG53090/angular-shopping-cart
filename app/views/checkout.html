@@ -1,7 +1,33 @@
 <h1>checkout</h1>
-{{whassup}}
+
 <main ng-controller="shoppingcartController" class="shopping-cart-container">
-  <ul ng-repeat="item in checkout">
-    <li>{{order}}</li>
+  <ul ng-repeat="item in cartService">
+
+    <li class="tea-item">
+      <div class="image-container">
+        <img ng-src="{{item.product.imageUrl}}" />
+      </div>
+      <div class="tea-info-container">
+        <h1>{{item.product.name}}</h1><br />
+        <h2>{{item.product.price}}</h2><br />
+        <h3>{{item.product.caffeineScale}}</h3><br />
+        <h4>{{item.product.ingredients}}</h4><br />
+        <h5>{{item.product.inStock}}</h5><br />
+        <ul ng-repeat="category in item.product.category">
+          <li>{{item.product.category}}</li>
+        </ul>
+      </div>
+      <div class="quantity-of-product">
+        {{item.quantity}}
+      </div>
+      <div class="total-cost-of-product">
+        {{item.cost}}
+      </div>
+      <div class="update-tea">
+        <button class="add-to-bag-btn" ng-click="">Edit quantity</button>
+        <button class="add-to-bag-btn" ng-click="">Remove</button>
+      </div>
+    </li>
+
   </ul>
 </main>
